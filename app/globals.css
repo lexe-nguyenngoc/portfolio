@@ -5,6 +5,7 @@
   --foreground: #ededed;
   --primary: oklch(0.6 0.22 279.78);
   --accent: oklch(0.86 0.2 159.25);
+  --border: oklch(0.6 0.22 279.78 / 0.3);
 }
 
 @theme inline {
@@ -14,6 +15,7 @@
   --font-jetbrains-mono: var(--font-jetbrains-mono);
   --color-primary: var(--primary);
   --color-accent: var(--accent);
+  --color-border: var(--border);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,9 +26,8 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: var(--font-roboto), Helvetica, sans-serif;
+  @apply text-lg bg-background text-foreground;
 }
 
 @utility primary-btn {

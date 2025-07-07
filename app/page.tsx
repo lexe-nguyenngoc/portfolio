@@ -1,4 +1,6 @@
+import AboutMe from "@/components/AboutMe";
 import Hero from "@/components/Hero";
+import SectionRenderer from "@/components/SectionRenderer";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -13,7 +15,7 @@ const LINKS: { href: string; label: string }[] = [
 
 const Home = () => {
   return (
-    <main className="w-screen">
+    <main>
       <header className="sticky top-0 bg-background/80 z-10">
         <div className="container mx-auto p-4">
           <nav className="flex items-center">
@@ -40,6 +42,8 @@ const Home = () => {
       </header>
 
       <Hero />
+
+      <AboutMe />
     </main>
   );
 };
