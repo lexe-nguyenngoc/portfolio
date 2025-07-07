@@ -1,3 +1,5 @@
+import Hero from "@/components/Hero";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -11,8 +13,8 @@ const LINKS: { href: string; label: string }[] = [
 
 const Home = () => {
   return (
-    <>
-      <header className="fixed z-10 bg-background/80 w-full">
+    <main className="w-screen">
+      <header className="sticky top-0 bg-background/80 z-10">
         <div className="container mx-auto p-4">
           <nav className="flex items-center">
             <div className="font-bold text-2xl">
@@ -26,7 +28,7 @@ const Home = () => {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-lg uppercase hover:text-primary transition-all ease-in-out duration-300"
+                    className="text-md uppercase hover:text-accent transition-all ease-in-out duration-300"
                   >
                     {item.label}
                   </Link>
@@ -36,7 +38,9 @@ const Home = () => {
           </nav>
         </div>
       </header>
-    </>
+
+      <Hero />
+    </main>
   );
 };
 
