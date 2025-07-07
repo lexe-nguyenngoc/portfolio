@@ -2,6 +2,7 @@
 
 :root {
   --background: oklch(0.18 0.03 266.64);
+  --background-2nd: #0f172a;
   --foreground: #ededed;
   --primary: oklch(0.6 0.22 279.78);
   --accent: oklch(0.86 0.2 159.25);
@@ -10,6 +11,7 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-2nd: var(--background-2nd);
   --color-foreground: var(--foreground);
   --font-roboto: var(--font-roboto);
   --font-jetbrains-mono: var(--font-jetbrains-mono);

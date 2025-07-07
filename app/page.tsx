@@ -1,6 +1,7 @@
 import AboutMe from "@/components/AboutMe";
 import Hero from "@/components/Hero";
 import SectionRenderer from "@/components/SectionRenderer";
+import TechStack from "@/components/TechStack";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -42,8 +43,8 @@ const Home = () => {
       </header>
 
       <Hero />
-
       <AboutMe />
+      <TechStack />
     </main>
   );
 };
