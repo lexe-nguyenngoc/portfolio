@@ -1,7 +1,9 @@
 import React from "react";
-import SectionRenderer from "./SectionRenderer";
+
 import { formatDate } from "@/utils/format";
 import { getDeviconClassName } from "@/utils/devicon";
+
+import SectionRenderer from "./SectionRenderer";
 
 const data: {
   id: string;

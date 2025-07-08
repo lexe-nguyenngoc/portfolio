@@ -1,20 +1,22 @@
 import React from "react";
 
 import SectionRenderer from "./SectionRenderer";
+import { cn } from "@/utils/cn";
+import { getDeviconClassName } from "@/utils/devicon";
 
-const TECHS: { label: string; name: string }[] = [
-  { label: "React", name: "react" },
-  { label: "Next.js", name: "nextjs" },
-  { label: "JavaScript", name: "javascript" },
-  { label: "TypeScript", name: "typescript" },
-  { label: "SCSS", name: "sass" },
-  { label: "CSS", name: "css3" },
-  { label: "HTML", name: "html5" },
-  { label: "NodeJS", name: "nodejs" },
-  { label: "Webpack", name: "webpack" },
-  { label: "PostgreSQL", name: "postgresql" },
-  { label: "Git", name: "git" },
-  { label: "Docker", name: "docker" }
+const TECHS: string[] = [
+  "React",
+  "Next.js",
+  "JavaScript",
+  "TypeScript",
+  "SCSS",
+  "CSS",
+  "HTML",
+  "NodeJS",
+  "Webpack",
+  "PostgreSQL",
+  "Git",
+  "Docker"
 ];
 
 const TechStack = () => {
@@ -27,9 +29,9 @@ const TechStack = () => {
     >
       <div className="container mx-auto grid grid-cols-6 gap-10">
         {TECHS.map((x) => (
-          <div key={x.name} className="rounded-lg bg-background flex items-center flex-col justify-center p-6">
-            <i className={`devicon-${x.name}-plain colored text-3xl`}></i>
-            <p className="text-white mt-4">{x.label}</p>
+          <div key={x} className="rounded-lg bg-background flex items-center flex-col justify-center p-6">
+            <i className={cn("colored text-3xl", getDeviconClassName(x))}></i>
+            <p className="text-white mt-4">{x}</p>
           </div>
         ))}
       </div>
