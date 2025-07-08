@@ -14,3 +14,8 @@ interface Project {
   link?: string;
   sourceLink?: string;
 }
+
+interface ActionResponse<T> {
+  success: boolean;
+  data?: T;
+}
