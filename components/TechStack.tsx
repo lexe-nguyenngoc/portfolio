@@ -1,4 +1,5 @@
 import React from "react";
+
 import SectionRenderer from "./SectionRenderer";
 
 const TECHS: { label: string; name: string }[] = [

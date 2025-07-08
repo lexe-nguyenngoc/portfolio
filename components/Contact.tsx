@@ -3,6 +3,8 @@ import { FaEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoTimeOutline } from "react-icons/io5";
 
+import SocialLinks from "./SocialLinks";
+
 const INFORMATION: { id: string; label: string; value: string; type?: "email"; icon: React.JSX.Element }[] = [
   { id: "1", label: "Email", value: "ngocle.ng1001@gmail.com", icon: <FaEnvelope />, type: "email" },
   { id: "2", label: "Location", value: "Ho Chi Minh City, Vietnam", icon: <FaLocationDot /> },
@@ -14,14 +16,9 @@ const INFORMATION: { id: string; label: string; value: string; type?: "email"; i
   }
 ];
 
-const CONNECTS = [
-  { id: "1", icon: "github", link: "https://github.com/lexe-nguyenngoc" },
-  { id: "2", icon: "linkedin", link: "https://www.linkedin.com/" }
-];
-
 const Contact = () => {
   return (
-    <div className="container mx-auto bg-primary/10 p-10 rounded-xl">
+    <div className="container mx-auto bg-primary/10 p-10 rounded-xl" id="contact">
       <h3 className="text-xl text-white font-bold">Contact Information</h3>
 
       {INFORMATION.map((x) => (
@@ -45,13 +42,7 @@ const Contact = () => {
 
       <h4 className="text-sm text-gray-300 font-semibold mt-10 mb-3">Connect with me</h4>
 
-      <div className="flex items-center gap-4">
-        {CONNECTS.map((x) => (
-          <a key={x.id} href={x.link} target="_blank" className="text-white text-xl">
-            <i className={`devicon-${x.icon}-plain`}></i>
-          </a>
-        ))}
-      </div>
+      <SocialLinks />
     </div>
   );
 };

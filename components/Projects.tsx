@@ -1,7 +1,9 @@
 import React from "react";
-import SectionRenderer from "./SectionRenderer";
 import Image from "next/image";
+
 import { cn } from "@/utils/cn";
+
+import SectionRenderer from "./SectionRenderer";
 
 const PROJECTS: Project[] = [
   {

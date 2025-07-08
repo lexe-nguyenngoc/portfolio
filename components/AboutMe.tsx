@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-import SectionRenderer from "./SectionRenderer";
 import { formatDate } from "@/utils/format";
+
+import SectionRenderer from "./SectionRenderer";
 
 const TIMELINE_DATA: WorkingTimeLine[] = [
   { startAt: new Date("1/1/2021"), finishAt: null, company: "FPT Software Ho Chi Minh", role: "Front End Engineer" }
