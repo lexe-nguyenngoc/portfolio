@@ -1,8 +1,15 @@
+import api from "@/utils/api";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Hero = () => {
+const Hero = async () => {
+  const response = await api.getHero();
+
+  if (!response.success) return <p>Something went wrong!</p>;
+
+  const { name, greeting } = response.data!;
+
   return (
     <section className="h-[800px] relative">
       <div className="absolute inset-0 -z-1">
@@ -12,9 +19,18 @@ const Hero = () => {
       <div className="container h-full mx-auto flex items-center">
         <div className="flex-1">
           <h2 className="text-2xl font-jetbrains-mono tracking-wide font-bold text-primary">Hello, I'm</h2>
-          <h1 className="text-6xl font-black mt-4 mb-6">Lexe Nguyen</h1>
+          <h1 className="text-6xl font-black mt-4 mb-6">{name}</h1>
           <p className="text-2xl font-bold mb-10">
-            A <span className="text-accent">Front-End Developers</span> who crafts clean and scalable solutions.
+            {greeting.map((x) => {
+              if (x.highlight)
+                return (
+                  <span key={x.value} className="text-accent">
+                    {x.value}
+                  </span>
+                );
+
+              return x.value;
+            })}
           </p>
 
           <Link href={"#about"} className="primary-btn px-4 py-3 cursor-pointer mr-4">

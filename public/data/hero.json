@@ -1,0 +1,8 @@
+{
+  "name": "Lexe Nguyen",
+  "greeting": [
+    { "value": "A " },
+    { "value": "Front-End Developers", "highlight": true },
+    { "value": " who crafts clean and scalable solutions." }
+  ]
+}
