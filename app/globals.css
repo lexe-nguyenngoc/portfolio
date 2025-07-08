@@ -23,19 +23,25 @@
 @media (prefers-color-scheme: dark) {
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-roboto), Helvetica, sans-serif;
-  @apply text-base bg-background text-foreground;
-}
-
 @utility primary-btn {
   @apply bg-primary rounded px-4 py-2 cursor-pointer hover:bg-primary/80 transition-all duration-300 ease-in;
 }
 
 @utility secondary-btn {
   @apply border-gray-500 text-white px-4 py-2 border rounded hover:border-accent hover:text-accent transition-all duration-300 ease-in cursor-pointer;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-roboto), Helvetica, sans-serif;
+    @apply text-base bg-background text-foreground;
+  }
+
+  .container {
+    @apply px-4;
+  }
 }

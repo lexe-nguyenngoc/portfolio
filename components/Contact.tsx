@@ -18,32 +18,34 @@ const INFORMATION: { id: string; label: string; value: string; type?: "email"; i
 
 const Contact = () => {
   return (
-    <div className="container mx-auto bg-primary/10 p-10 rounded-xl" id="contact">
-      <h3 className="text-xl text-white font-bold">Contact Information</h3>
+    <section className="container mx-auto" id="contact">
+      <div className="bg-primary/10 p-10 rounded-xl">
+        <h3 className="text-xl text-white font-bold">Contact Information</h3>
 
-      {INFORMATION.map((x) => (
-        <div key={x.id} className="flex items-center mt-5 gap-4">
-          <div className="text-primary bg-primary/20 w-12 h-12 rounded-full flex items-center justify-center text-xl">
-            {x.icon}
+        {INFORMATION.map((x) => (
+          <div key={x.id} className="flex items-center mt-5 gap-4">
+            <div className="text-primary bg-primary/20 w-12 h-12 rounded-full flex items-center justify-center text-xl">
+              {x.icon}
+            </div>
+
+            <div>
+              <h4 className="text-gray-300 text-sm font-semibold">{x.label}</h4>
+              {x.type === "email" ? (
+                <a href={`mailto:${x.value}`} className="text-white">
+                  {x.value}
+                </a>
+              ) : (
+                <p className="text-white">{x.value}</p>
+              )}
+            </div>
           </div>
+        ))}
 
-          <div>
-            <h4 className="text-gray-300 text-sm font-semibold">{x.label}</h4>
-            {x.type === "email" ? (
-              <a href={`mailto:${x.value}`} className="text-white">
-                {x.value}
-              </a>
-            ) : (
-              <p className="text-white">{x.value}</p>
-            )}
-          </div>
-        </div>
-      ))}
+        <h4 className="text-sm text-gray-300 font-semibold mt-10 mb-3">Connect with me</h4>
 
-      <h4 className="text-sm text-gray-300 font-semibold mt-10 mb-3">Connect with me</h4>
-
-      <SocialLinks />
-    </div>
+        <SocialLinks />
+      </div>
+    </section>
   );
 };
 
