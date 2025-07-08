@@ -1,5 +1,6 @@
 import AboutMe from "@/components/AboutMe";
 import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 import SectionRenderer from "@/components/SectionRenderer";
 import TechStack from "@/components/TechStack";
 import Image from "next/image";
@@ -45,6 +46,7 @@ const Home = () => {
       <Hero />
       <AboutMe />
       <TechStack />
+      <Projects />
     </main>
   );
 };
