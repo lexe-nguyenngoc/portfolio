@@ -1,4 +1,5 @@
 import AboutMe from "@/components/AboutMe";
+import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import SectionRenderer from "@/components/SectionRenderer";
@@ -47,6 +48,7 @@ const Home = () => {
       <AboutMe />
       <TechStack />
       <Projects />
+      <Contact />
     </main>
   );
 };
