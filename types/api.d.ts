@@ -11,3 +11,7 @@ interface AboutMeData {
 interface TechStackData {
   skills: string[];
 }
+
+interface WorkingExperienceData {
+  data: WorkingExperience[];
+}

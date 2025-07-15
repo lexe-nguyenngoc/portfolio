@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "role": "FrontEnd Engineer",
+      "projectName": "BetterPlace",
+      "startAt": "1/1/2026",
+      "company": "FPT Software Ho Chi Minh, Vietnam",
+      "description": "This project, [Your Project Name], is a [type of application, e.g., full-stack web application, mobile-first platform, SaaS solution] designed to [core problem it solves or main objective]. It provides users with a [describe main benefit, e.g., seamless, intuitive, efficient] experience by [briefly explain how it works or key features].",
+      "techStacks": ["Next.js", "React", "TypeScript", "Tailwindcss", "Prisma", "HTML"]
+    },
+    {
+      "id": "2",
+      "role": "FrontEnd Engineer",
+      "projectName": "BetterPlace",
+      "startAt": "1/1/2021",
+      "finishAt": "1/1/2022",
+      "company": "FPT Software Ho Chi Minh, Vietnam",
+      "description": "This project, [Your Project Name], is a [type of application, e.g., full-stack web application, mobile-first platform, SaaS solution] designed to [core problem it solves or main objective]. It provides users with a [describe main benefit, e.g., seamless, intuitive, efficient] experience by [briefly explain how it works or key features].",
+      "techStacks": ["Next.js", "React", "TypeScript", "Tailwindcss", "Prisma", "HTML"]
+    },
+    {
+      "id": "3",
+      "role": "FrontEnd Engineer",
+      "projectName": "BetterPlace",
+      "startAt": "1/1/2021",
+      "finishAt": "1/1/2022",
+      "company": "FPT Software Ho Chi Minh, Vietnam",
+      "description": "This project, [Your Project Name], is a [type of application, e.g., full-stack web application, mobile-first platform, SaaS solution] designed to [core problem it solves or main objective]. It provides users with a [describe main benefit, e.g., seamless, intuitive, efficient] experience by [briefly explain how it works or key features].",
+      "techStacks": ["Next.js", "React", "TypeScript", "Tailwindcss", "Prisma", "HTML"]
+    }
+  ]
+}

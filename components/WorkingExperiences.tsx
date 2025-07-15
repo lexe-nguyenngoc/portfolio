@@ -4,52 +4,15 @@ import { formatDate } from "@/utils/format";
 import { getDeviconClassName } from "@/utils/devicon";
 
 import SectionRenderer from "./SectionRenderer";
+import api from "@/utils/api";
 
-const data: {
-  id: string;
-  role: string;
-  projectName: string;
-  startAt: Date | string;
-  finishAt?: Date | string;
-  company: string;
-  description: string;
-  techStacks: string[];
-}[] = [
-  {
-    id: "1",
-    role: "FrontEnd Engineer",
-    projectName: "BetterPlace",
-    startAt: "1/1/2026",
-    company: "FPT Software Ho Chi Minh, Vietnam",
-    description:
-      "This project, [Your Project Name], is a [type of application, e.g., full-stack web application, mobile-first platform, SaaS solution] designed to [core problem it solves or main objective]. It provides users with a [describe main benefit, e.g., seamless, intuitive, efficient] experience by [briefly explain how it works or key features].",
-    techStacks: ["Next.js", "React", "TypeScript", "Tailwindcss", "Prisma", "HTML"]
-  },
-  {
-    id: "2",
-    role: "FrontEnd Engineer",
-    projectName: "BetterPlace",
-    startAt: "1/1/2021",
-    finishAt: "1/1/2022",
-    company: "FPT Software Ho Chi Minh, Vietnam",
-    description:
-      "This project, [Your Project Name], is a [type of application, e.g., full-stack web application, mobile-first platform, SaaS solution] designed to [core problem it solves or main objective]. It provides users with a [describe main benefit, e.g., seamless, intuitive, efficient] experience by [briefly explain how it works or key features].",
-    techStacks: ["Next.js", "React", "TypeScript", "Tailwindcss", "Prisma", "HTML"]
-  },
-  {
-    id: "3",
-    role: "FrontEnd Engineer",
-    projectName: "BetterPlace",
-    startAt: "1/1/2021",
-    finishAt: "1/1/2022",
-    company: "FPT Software Ho Chi Minh, Vietnam",
-    description:
-      "This project, [Your Project Name], is a [type of application, e.g., full-stack web application, mobile-first platform, SaaS solution] designed to [core problem it solves or main objective]. It provides users with a [describe main benefit, e.g., seamless, intuitive, efficient] experience by [briefly explain how it works or key features].",
-    techStacks: ["Next.js", "React", "TypeScript", "Tailwindcss", "Prisma", "HTML"]
-  }
-];
+const WorkingExperiences = async () => {
+  const response = await api.getWorkingExperiences();
 
-const WorkingExperiences = () => {
+  if (!response.success) return <p>Something went wrong!</p>;
+
+  const { data } = response.data!;
+
   return (
     <SectionRenderer id="experiences" name="My Experiences" caption="Where I've Been Employed">
       <div className="w-full max-w-[820px] px-4 mx-auto">
