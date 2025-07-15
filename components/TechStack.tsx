@@ -19,7 +19,7 @@ const TechStack = async () => {
       caption="The technologies I use to bring ideas to life"
       className="bg-background-2nd"
     >
-      <div className="container mx-auto grid grid-cols-6 gap-10">
+      <div className="container mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4 lg:gap-6">
         {skills.map((x) => (
           <div key={x} className="rounded-lg bg-background flex items-center flex-col justify-center p-6">
             <i className={cn("colored text-3xl", getDeviconClassName(x))}></i>
