@@ -33,14 +33,14 @@ const Hero = async () => {
             })}
           </p>
 
-          <Link href={"#about"} className="primary-btn px-4 py-3 cursor-pointer mr-4">
+          <Link href={"#experiences"} className="primary-btn px-4 py-3 cursor-pointer mr-4">
             View My Work
           </Link>
           <Link href={"#contact"} className="border-accent rounded cursor-pointer border px-4 py-3">
             Get In Touch
           </Link>
         </div>
-        <div className="flex-1 flex items-center justify-center">
+        <div className="flex-1 flex items-center justify-center max-md:hidden">
           <Image
             className="animate-bounce"
             width={320}
