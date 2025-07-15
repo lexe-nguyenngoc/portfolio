@@ -2,9 +2,9 @@ import React from "react";
 
 import { formatDate } from "@/utils/format";
 import { getDeviconClassName } from "@/utils/devicon";
+import api from "@/utils/api";
 
 import SectionRenderer from "./SectionRenderer";
-import api from "@/utils/api";
 
 const WorkingExperiences = async () => {
   const response = await api.getWorkingExperiences();
@@ -17,8 +17,11 @@ const WorkingExperiences = async () => {
     <SectionRenderer id="experiences" name="My Experiences" caption="Where I've Been Employed">
       <div className="w-full max-w-[820px] px-4 mx-auto">
         {data.map((x) => (
-          <div key={x.id} className="grid grid-cols-2 gap-20 py-4 not-last:border-b not-last:border-gray-800">
-            <div className="">
+          <div
+            key={x.id}
+            className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-12 py-4 not-last:border-b not-last:border-gray-800"
+          >
+            <div className="text-center md:text-left">
               <h3 className="text-lg font-bold tracking-wider">
                 {x.role}, <span className="text-accent">{x.projectName}</span>
               </h3>
