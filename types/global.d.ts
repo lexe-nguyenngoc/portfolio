@@ -1,7 +1,7 @@
 interface WorkingTimeLine {
-  startAt: Date;
+  startAt: string;
   company: string;
-  finishAt: null | Date;
+  finishAt: null | string;
   role: string;
 }
 

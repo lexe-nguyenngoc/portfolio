@@ -1,0 +1,20 @@
+{
+  "summaries": [
+    "I'm a passionate Full Stack Developer with a strong focus on creating elegant, efficient, and user-friendly web applications. With 5+ years of experience in web development, I specialize in React, Next.js, and Node.js ecosystems.",
+    "My journey in tech began at MIT where I studied Computer Science. Since then, I've worked with startups and established companies to build scalable products that solve real-world problems. I'm constantly learning and exploring new technologies to stay at the cutting edge of web development."
+  ],
+  "timelines": [
+    {
+      "role": "Frontend Engineer",
+      "startAt": "2021",
+      "finishAt": null,
+      "company": "FPT Software Ho Chi Minh"
+    },
+    {
+      "role": "Frontend Engineer",
+      "startAt": 2018,
+      "finishAt": 2021,
+      "company": "FPT Software Ho Chi Minh"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
-export const formatDate = (date?: Date | number): string => {
+export const formatDate = (date: Date | number | string): string => {
   const formattedDate = new Intl.DateTimeFormat("en-US", {
     month: "short",
     year: "numeric"
-  }).format(date);
+  }).format(new Date(date));
 
   return formattedDate;
 };
