@@ -4,7 +4,7 @@ import { cn } from "@/utils/cn";
 
 const SOCIAL_LINKS = [
   { id: "1", icon: "github", link: "https://github.com/lexe-nguyenngoc" },
-  { id: "2", icon: "linkedin", link: "https://www.linkedin.com/" }
+  { id: "2", icon: "linkedin", link: "https://www.linkedin.com/in/ngoc-le-nguyen-07ab44243" }
 ];
 
 interface SocialLinks {
