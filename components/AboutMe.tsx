@@ -15,11 +15,11 @@ const AboutMe = async () => {
 
   return (
     <SectionRenderer id="about" name="About Me">
-      <div className="container mx-auto flex gap-10">
-        <div className="min-w-[400px] h-[380px] relative border-primary/30 border rounded">
+      <div className="container mx-auto md:flex md:items-stretch gap-10">
+        <div className="w-full md:min-w-[300px] lg:min-w-[400px] min-h-[400px] relative border-primary/30 border rounded">
           <Image src="/avatar.jpg" fill alt="avatar" className="object-cover object-center" />
         </div>
-        <div className="flex-1">
+        <div className="mt-4 md:mt-0">
           <div>
             <h4 className="font-bold text-2xl"> Who am I?</h4>
             {summaries.map((x, index) => (
