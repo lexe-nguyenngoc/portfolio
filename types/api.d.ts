@@ -7,3 +7,7 @@ interface AboutMeData {
   summaries: string[];
   timelines: WorkingTimeLine[];
 }
+
+interface TechStackData {
+  skills: string[];
+}

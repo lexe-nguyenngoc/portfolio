@@ -1,25 +1,17 @@
 import React from "react";
 
 import SectionRenderer from "./SectionRenderer";
+
 import { cn } from "@/utils/cn";
 import { getDeviconClassName } from "@/utils/devicon";
+import api from "@/utils/api";
 
-const TECHS: string[] = [
-  "React",
-  "Next.js",
-  "JavaScript",
-  "TypeScript",
-  "SCSS",
-  "CSS",
-  "HTML",
-  "NodeJS",
-  "Webpack",
-  "PostgreSQL",
-  "Git",
-  "Docker"
-];
+const TechStack = async () => {
+  const response = await api.getSkills();
 
-const TechStack = () => {
+  if (!response.success) return <p>Something went wrong!</p>;
+  const { skills } = response.data!;
+
   return (
     <SectionRenderer
       id="skills"
@@ -28,7 +20,7 @@ const TechStack = () => {
       className="bg-background-2nd"
     >
       <div className="container mx-auto grid grid-cols-6 gap-10">
-        {TECHS.map((x) => (
+        {skills.map((x) => (
           <div key={x} className="rounded-lg bg-background flex items-center flex-col justify-center p-6">
             <i className={cn("colored text-3xl", getDeviconClassName(x))}></i>
             <p className="text-white mt-4">{x}</p>
