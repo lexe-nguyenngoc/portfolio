@@ -2,6 +2,9 @@ import React from "react";
 import { FaEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoTimeOutline } from "react-icons/io5";
+import * as motion from "motion/react-client";
+
+import ANIMATION from "@/constants/animation";
 
 import SocialLinks from "./SocialLinks";
 
@@ -18,34 +21,52 @@ const INFORMATION: { id: string; label: string; value: string; type?: "email"; i
 
 const Contact = () => {
   return (
-    <section className="container mx-auto" id="contact">
-      <div className="bg-primary/10 p-10 rounded-xl">
-        <h3 className="text-xl text-white font-bold">Contact Information</h3>
+    <motion.section
+      id="contact"
+      className="container mx-auto"
+      variants={ANIMATION.group}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: "some", once: true }}
+    >
+      <div className="bg-primary/10 p-10 rounded-xl overflow-x-hidden">
+        <motion.h3 className="text-xl text-white font-bold" variants={ANIMATION.fadeInRight}>
+          Contact Information
+        </motion.h3>
 
         {INFORMATION.map((x) => (
           <div key={x.id} className="flex items-center mt-5 gap-4">
-            <div className="text-primary bg-primary/20 w-12 h-12 rounded-full flex items-center justify-center text-xl">
+            <motion.div
+              variants={ANIMATION.scale}
+              className="text-primary bg-primary/20 w-12 h-12 min-w-12 min-h-12 rounded-full flex items-center justify-center text-xl"
+            >
               {x.icon}
-            </div>
+            </motion.div>
 
             <div>
-              <h4 className="text-gray-300 text-sm font-semibold">{x.label}</h4>
-              {x.type === "email" ? (
-                <a href={`mailto:${x.value}`} className="text-white">
-                  {x.value}
-                </a>
-              ) : (
-                <p className="text-white">{x.value}</p>
-              )}
+              <motion.h4 variants={ANIMATION.slideUp} className="text-gray-300 text-sm font-semibold">
+                {x.label}
+              </motion.h4>
+              <motion.div variants={ANIMATION.slideUp}>
+                {x.type === "email" ? (
+                  <a href={`mailto:${x.value}`} className="text-white">
+                    {x.value}
+                  </a>
+                ) : (
+                  <p className="text-white">{x.value}</p>
+                )}
+              </motion.div>
             </div>
           </div>
         ))}
 
-        <h4 className="text-sm text-gray-300 font-semibold mt-10 mb-3">Connect with me</h4>
+        <motion.h4 variants={ANIMATION.fadeInRight} className="text-sm text-gray-300 font-semibold mt-10 mb-3">
+          Connect with me
+        </motion.h4>
 
         <SocialLinks />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

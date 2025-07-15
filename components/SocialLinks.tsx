@@ -1,6 +1,8 @@
 import React from "react";
+import * as motion from "motion/react-client";
 
 import { cn } from "@/utils/cn";
+import ANIMATION from "@/constants/animation";
 
 const SOCIAL_LINKS = [
   { id: "1", icon: "github", link: "https://github.com/lexe-nguyenngoc" },
@@ -15,9 +17,15 @@ const SocialLinks = ({ className }: SocialLinks) => {
   return (
     <div className={cn("flex items-center gap-4", className)}>
       {SOCIAL_LINKS.map((x) => (
-        <a key={x.id} href={x.link} target="_blank" className="text-white text-xl">
+        <motion.a
+          variants={ANIMATION.fadeInRight}
+          key={x.id}
+          href={x.link}
+          target="_blank"
+          className="text-white text-xl"
+        >
           <i className={`devicon-${x.icon}-plain`}></i>
-        </a>
+        </motion.a>
       ))}
     </div>
   );

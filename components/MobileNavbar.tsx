@@ -4,39 +4,24 @@ import { motion, Variants } from "motion/react";
 
 import NavLinks from "./NavLinks";
 
-const navVariants = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 }
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 }
-  }
-};
-
 const sidebarVariants: Variants = {
-  open: (position: string) => {
-    console.log("open", position);
-    return {
-      clipPath: `circle(1000px at ${position})`,
-      transition: {
-        type: "spring",
-        stiffness: 20,
-        restDelta: 2
-      }
-    };
-  },
-  closed: (position: string) => {
-    console.log("close", position);
-    return {
-      clipPath: `circle(0px at ${position})`,
-      transition: {
-        delay: 0.2,
-        type: "spring",
-        stiffness: 400,
-        damping: 40
-      }
-    };
-  }
+  open: (position: string) => ({
+    clipPath: `circle(1000px at ${position})`,
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2
+    }
+  }),
+  closed: (position: string) => ({
+    clipPath: `circle(0px at ${position})`,
+    transition: {
+      delay: 0.2,
+      type: "spring",
+      stiffness: 400,
+      damping: 40
+    }
+  })
 };
 
 const MobileNavbar = () => {
@@ -138,10 +123,12 @@ const MobileNavbar = () => {
       <motion.div
         custom={position}
         variants={sidebarVariants}
-        className="fixed top-0 left-0 bottom-0 right-0 bg-black/90 flex items-center justify-center"
-      >
-        <NavLinks mobile className="flex-col w-fit text-center" onNavClick={handleHideMenu} />
-      </motion.div>
+        className="fixed inset-0 bg-black/90 flex items-center justify-center"
+      />
+      <NavLinks
+        className="fixed w-fit top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex-col text-center"
+        onNavClick={handleHideMenu}
+      />
     </motion.div>
   );
 };

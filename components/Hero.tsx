@@ -1,7 +1,10 @@
-import api from "@/utils/api";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import * as motion from "motion/react-client";
+
+import api from "@/utils/api";
+import ANIMATION from "@/constants/animation";
 
 const Hero = async () => {
   const response = await api.getHero();
@@ -11,16 +14,30 @@ const Hero = async () => {
   const { name, greeting } = response.data!;
 
   return (
-    <section className="h-[800px] relative">
+    <motion.section
+      className="h-[calc(100vh-64px)] md:h-[800px] relative"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: "some", once: true }}
+    >
       <div className="absolute inset-0 -z-1">
-        <Image className="object-cover" src="/hero.png" fill alt="Hero image" />
+        <motion.div variants={ANIMATION.fade}>
+          <Image className="object-cover" src="/hero.png" fill alt="Hero image" />
+        </motion.div>
         <div className="absolute inset-0 bg-background/60"></div>
       </div>
-      <div className="container h-full mx-auto flex items-center">
-        <div className="flex-1">
-          <h2 className="text-2xl font-jetbrains-mono tracking-wide font-bold text-primary">Hello, I'm</h2>
-          <h1 className="text-6xl font-black mt-4 mb-6">{name}</h1>
-          <p className="text-2xl font-bold mb-10">
+      <div className="container h-full mx-auto flex flex-col justify-center items-center md:flex-row gap-12">
+        <div className="h-fit overflow-hidden">
+          <motion.h2
+            variants={ANIMATION.fadeInLeft}
+            className="text-2xl font-jetbrains-mono tracking-wide font-bold text-primary"
+          >
+            Hello, I'm
+          </motion.h2>
+          <motion.h1 variants={ANIMATION.slideUp} className="text-6xl font-black mt-4 mb-6">
+            {name}
+          </motion.h1>
+          <motion.p variants={ANIMATION.fadeInLeft} className="text-2xl font-bold mb-10">
             {greeting.map((x) => {
               if (x.highlight)
                 return (
@@ -31,15 +48,19 @@ const Hero = async () => {
 
               return x.value;
             })}
-          </p>
+          </motion.p>
 
-          <Link href={"#experiences"} className="primary-btn px-4 py-3 cursor-pointer mr-4">
-            View My Work
-          </Link>
-          <Link href={"#contact"} className="border-accent rounded cursor-pointer border px-4 py-3">
-            Get In Touch
-          </Link>
+          <motion.div variants={ANIMATION.fadeInRight} className="flex gap-4">
+            <Link href={"#experiences"} className="primary-btn px-4 py-3 cursor-pointer">
+              View My Work
+            </Link>
+
+            <Link href={"#contact"} className="border-accent rounded cursor-pointer border px-4 py-3">
+              Get In Touch
+            </Link>
+          </motion.div>
         </div>
+
         <div className="flex-1 flex items-center justify-center max-md:hidden">
           <Image
             className="animate-bounce"
@@ -50,7 +71,7 @@ const Hero = async () => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

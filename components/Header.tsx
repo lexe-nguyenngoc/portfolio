@@ -1,4 +1,5 @@
 import React from "react";
+import * as motion from "motion/react-client";
 
 import Logo from "./Logo";
 import NavLinks from "./NavLinks";
@@ -11,7 +12,9 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           <Logo />
 
-          <NavLinks className="max-md:hidden" />
+          <motion.div initial="closed" animate="open" exit="closed">
+            <NavLinks className="max-md:hidden" />
+          </motion.div>
           <MobileNavbar />
         </nav>
       </div>

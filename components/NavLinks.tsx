@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import React from "react";
 import { motion } from "motion/react";
@@ -38,16 +39,9 @@ const itemVariants = {
   }
 };
 
-const NavLinks = ({ className, mobile, onNavClick }: NavLinksProps) => {
-  const props: { animate?: string; initial?: string; exit?: string } = {};
-  if (!mobile) {
-    props.initial = "closed";
-    props.exit = "closed";
-    props.animate = "open";
-  }
-
+const NavLinks = ({ className, onNavClick }: NavLinksProps) => {
   return (
-    <motion.ul variants={navVariants} {...props} className={cn("flex gap-6", className)}>
+    <motion.ul variants={navVariants} className={cn("flex gap-6", className)}>
       {NAV_LINKS.map((item) => (
         <motion.li key={item.href} variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
           <Link
