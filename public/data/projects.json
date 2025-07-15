@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "name": "E-Commerce Platform",
+      "description": "A complete e-commerce solution with admin dashboard, inventory management, and analytics.",
+      "techStacks": ["React", "Node.js", "PostgreSQL"],
+      "link": "https://vocabspace.io.vn",
+      "sourceLink": "https://vocabspace.io.vn",
+      "thumbnail": "https://storage.googleapis.com/uxpilot-auth.appspot.com/eada77c41d-c19e7c3d7cd6a25831d7.png"
+    },
+    {
+      "id": "2",
+      "name": "E-Commerce Platform",
+      "description": "A complete e-commerce solution with admin dashboard, inventory management, and analytics.",
+      "techStacks": ["React", "Node.js", "PostgreSQL"],
+      "link": "https://vocabspace.io.vn",
+      "sourceLink": "https://vocabspace.io.vn"
+    },
+    {
+      "id": "3",
+      "name": "E-Commerce Platform",
+      "description": "A complete e-commerce solution with admin dashboard, inventory management, and analytics.",
+      "techStacks": ["React", "Node.js", "PostgreSQL"],
+      "thumbnail": "https://storage.googleapis.com/uxpilot-auth.appspot.com/2ed896fa8b-efed667499a3121e6b39.png"
+    }
+  ]
+}

@@ -15,3 +15,7 @@ interface TechStackData {
 interface WorkingExperienceData {
   data: WorkingExperience[];
 }
+
+interface ProjectsData {
+  projects: Project[];
+}

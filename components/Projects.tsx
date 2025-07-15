@@ -2,45 +2,29 @@ import React from "react";
 import Image from "next/image";
 
 import { cn } from "@/utils/cn";
+import api from "@/utils/api";
 
 import SectionRenderer from "./SectionRenderer";
 
-const PROJECTS: Project[] = [
-  {
-    id: "1",
-    name: "E-Commerce Platform",
-    description: "A complete e-commerce solution with admin dashboard, inventory management, and analytics.",
-    techStacks: ["React", "Node.js", "PostgreSQL"],
-    link: "https://vocabspace.io.vn",
-    sourceLink: "https://vocabspace.io.vn",
-    thumbnail: "https://storage.googleapis.com/uxpilot-auth.appspot.com/eada77c41d-c19e7c3d7cd6a25831d7.png"
-  },
-  {
-    id: "2",
-    name: "E-Commerce Platform",
-    description: "A complete e-commerce solution with admin dashboard, inventory management, and analytics.",
-    techStacks: ["React", "Node.js", "PostgreSQL"],
-    link: "https://vocabspace.io.vn",
-    sourceLink: "https://vocabspace.io.vn",
-    thumbnail: "https://storage.googleapis.com/uxpilot-auth.appspot.com/eada77c41d-c19e7c3d7cd6a25831d7.png"
-  },
-  {
-    id: "3",
-    name: "E-Commerce Platform",
-    description: "A complete e-commerce solution with admin dashboard, inventory management, and analytics.",
-    techStacks: ["React", "Node.js", "PostgreSQL"],
-    thumbnail: "https://storage.googleapis.com/uxpilot-auth.appspot.com/2ed896fa8b-efed667499a3121e6b39.png"
-  }
-];
+const Projects = async () => {
+  const response = await api.getProjects();
 
-const Projects = () => {
+  if (!response.success) return <p>Something went wrong!</p>;
+
+  const { projects } = response.data!;
+
   return (
     <SectionRenderer id="projects" name="Featured Projects" caption="Check out some of my recent projects">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {PROJECTS.map((project) => (
+        {projects.map((project) => (
           <div key={project.id} className="bg-background-2nd rounded-md">
             <div className="relative h-[200px] ">
-              <Image src={project.thumbnail} fill alt={project.name} className="object-cover" />
+              <Image
+                src={project.thumbnail || "/placeholder.svg"}
+                fill
+                alt={project.name}
+                className="object-cover rounded-tl-md rounded-tr-md"
+              />
             </div>
             <div className="p-4">
               <h3 className="font-bold text-xl text-white">{project.name}</h3>

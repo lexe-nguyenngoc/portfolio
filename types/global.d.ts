@@ -10,7 +10,7 @@ interface Project {
   name: string;
   description: string;
   techStacks: string[];
-  thumbnail: string;
+  thumbnail?: string;
   link?: string;
   sourceLink?: string;
 }
