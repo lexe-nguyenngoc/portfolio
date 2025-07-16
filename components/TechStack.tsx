@@ -35,7 +35,7 @@ const TechStack = async () => {
             key={x}
             className="rounded-lg bg-background flex items-center flex-col justify-center p-6"
           >
-            <i className={cn("colored text-3xl", getDeviconClassName(x))}></i>
+            <i className={cn("text-3xl", getDeviconClassName(x))}></i>
             <p className="text-white mt-4">{x}</p>
           </motion.div>
         ))}

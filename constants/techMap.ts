@@ -95,6 +95,7 @@ export const TECH_MAP: { [key: string]: string } = {
 
   // SASS
   sass: "devicon-sass-plain",
+  scss: "devicon-sass-plain",
 
   // Laravel
   laravel: "devicon-laravel-plain",
@@ -117,7 +118,7 @@ export const TECH_MAP: { [key: string]: string } = {
 
   // Azure
   azure: "devicon-azure-plain",
-  "azure devops": "devicon-azure-plain",
+  azuredevops: "devicon-azuredevops-plain",
 
   // Google Cloud Platform
   gcp: "devicon-googlecloud-plain",
@@ -194,5 +195,30 @@ export const TECH_MAP: { [key: string]: string } = {
   redux: "devicon-redux-original",
 
   // Three.js
-  threejs: "devicon-threejs-original"
+  threejs: "devicon-threejs-original",
+
+  // Webpack
+  webpack: "devicon-webpack-plain",
+
+  // Express
+  express: "devicon-express-original",
+
+  // Motion
+  motion: "devicon-framermotion-original",
+  framermotion: "devicon-framermotion-original",
+
+  // Github
+  github: "devicon-github-original",
+
+  // Eslint
+  eslint: "devicon-eslint-plain-wordmark",
+
+  // Prisma
+  prisma: "devicon-prisma-original",
+
+  // Axios
+  axios: "devicon-axios-plain",
+
+  // Testing
+  jest: "devicon-jest-plain"
 };

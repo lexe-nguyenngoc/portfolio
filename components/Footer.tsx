@@ -11,7 +11,7 @@ const Footer = () => {
     <motion.footer
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ amount: "some" }}
+      viewport={{ amount: "some", once: true }}
       variants={ANIMATION.group}
       className="mt-14 bg-primary/20 border-t-1 border-gray-600 py-10 overflow-hidden"
     >

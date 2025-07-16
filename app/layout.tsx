@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Nguyen Ngoc Le Portfolio",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "/social.jpeg",
         width: 1200,
         height: 630,
         alt: "Nguyen Ngoc Le - Frontend Engineer Portfolio"
@@ -49,10 +49,10 @@ export const metadata: Metadata = {
     type: "website"
   },
   twitter: {
-    card: "summary_large_image",
+    card: "/social.jpeg",
     title: "Nguyen Ngoc Le - Frontend Engineer Portfolio",
     description: "Frontend Engineer Portfolio — React, Next.js, TypeScript & UI/UX Specialist",
-    images: ["/twitter-image.png"]
+    images: ["/social.jpeg"]
   },
   robots: {
     index: true,

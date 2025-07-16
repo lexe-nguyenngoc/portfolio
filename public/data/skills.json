@@ -2,15 +2,28 @@
   "skills": [
     "React",
     "Next.js",
+    "Angular",
+    "Redux",
+    "Motion",
+    "Prisma",
+
     "JavaScript",
     "TypeScript",
-    "SCSS",
-    "CSS",
     "HTML",
+    "CSS",
+    "SCSS",
+    "TailwindCSS",
+    "Bootstrap",
+
     "NodeJS",
-    "Webpack",
+    "Express",
     "PostgreSQL",
+
+    "Docker",
     "Git",
-    "Docker"
+    "Github",
+    "Azure Devops",
+    "Webpack",
+    "Eslint"
   ]
 }

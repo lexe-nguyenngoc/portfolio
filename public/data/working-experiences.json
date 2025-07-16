@@ -3,31 +3,31 @@
     {
       "id": "1",
       "role": "FrontEnd Engineer",
-      "projectName": "BetterPlace",
-      "startAt": "1/1/2026",
+      "projectName": "Project Control Tower",
+      "startAt": "1/1/2024",
       "company": "FPT Software Ho Chi Minh, Vietnam",
-      "description": "This project, [Your Project Name], is a [type of application, e.g., full-stack web application, mobile-first platform, SaaS solution] designed to [core problem it solves or main objective]. It provides users with a [describe main benefit, e.g., seamless, intuitive, efficient] experience by [briefly explain how it works or key features].",
-      "techStacks": ["Next.js", "React", "TypeScript", "Tailwindcss", "Prisma", "HTML"]
+      "description": "This project aims to build a cloud-based platform for real-time data visualization, seamlessly integrating IoT devices and connecting various project management systems across the enterprise. The goal is to provide stakeholders with a comprehensive view of project progress, risks, and performance, enabling faster and more informed decision-making. The platform also fosters cross-departmental collaboration by creating a centralized space for information sharing and communication.",
+      "techStacks": ["Next.js", "React", "TypeScript", "TailwindCSS", "Prisma", "HTML", "Azure Devops"]
     },
     {
       "id": "2",
       "role": "FrontEnd Engineer",
-      "projectName": "BetterPlace",
-      "startAt": "1/1/2021",
-      "finishAt": "1/1/2022",
+      "projectName": "Enterprise Data Hub",
+      "startAt": "10/1/2022",
+      "finishAt": "1/1/2024",
       "company": "FPT Software Ho Chi Minh, Vietnam",
-      "description": "This project, [Your Project Name], is a [type of application, e.g., full-stack web application, mobile-first platform, SaaS solution] designed to [core problem it solves or main objective]. It provides users with a [describe main benefit, e.g., seamless, intuitive, efficient] experience by [briefly explain how it works or key features].",
-      "techStacks": ["Next.js", "React", "TypeScript", "Tailwindcss", "Prisma", "HTML"]
+      "description": "Developed a cloud-based unified data platform integrating over 280 sources and 500+ data types to provide a comprehensive view of enterprise operations. The project accelerates analytics and enhances decision-making using Azure Data Factory, Synapse Analytics, and Databricks. Integrated a self-service portal (Data+) with intelligent search, AI chatbot, and knowledge graph to improve data accessibility and internal collaboration.",
+      "techStacks": ["React", "JavaScript", "SCSS", "Redux", "Axios", "Jest"]
     },
     {
       "id": "3",
       "role": "FrontEnd Engineer",
-      "projectName": "BetterPlace",
-      "startAt": "1/1/2021",
-      "finishAt": "1/1/2022",
+      "projectName": "Enterprise Optimization Platform",
+      "startAt": "5/1/2021",
+      "finishAt": "10/1/2022",
       "company": "FPT Software Ho Chi Minh, Vietnam",
-      "description": "This project, [Your Project Name], is a [type of application, e.g., full-stack web application, mobile-first platform, SaaS solution] designed to [core problem it solves or main objective]. It provides users with a [describe main benefit, e.g., seamless, intuitive, efficient] experience by [briefly explain how it works or key features].",
-      "techStacks": ["Next.js", "React", "TypeScript", "Tailwindcss", "Prisma", "HTML"]
+      "description": "A platform that helps enterprises optimize operations by connecting systems, analyzing data, and providing real-time improvement suggestions. Utilizes AI, interactive dashboards, and integrates with ERP systems to enhance performance and support faster decision-making.",
+      "techStacks": ["React", "JavaScript", "SCSS", "Redux", "Axios", "Jest"]
     }
   ]
 }

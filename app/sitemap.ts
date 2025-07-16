@@ -1,9 +1,11 @@
 import type { MetadataRoute } from "next";
 
+import { DOMAIN_NAME } from "@/constants/configs";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://your-portfolio-domain.com",
+      url: DOMAIN_NAME,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1

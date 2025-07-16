@@ -5,5 +5,7 @@ export const getDeviconClassName = (techName: string) => {
 
   const iconClass = TECH_MAP[normalizedTechName];
 
+  console.log(techName, normalizedTechName, iconClass);
+
   return iconClass ? `${iconClass} colored` : "devicon-devicon-plain";
 };
