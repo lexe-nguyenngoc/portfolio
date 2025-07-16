@@ -5,6 +5,7 @@ import * as motion from "motion/react-client";
 import { formatDate } from "@/utils/format";
 import api from "@/utils/api";
 import ANIMATION from "@/constants/animation";
+import { NAV_REFERENCE_IDS } from "@/constants/navLinks";
 
 import SectionRenderer from "./SectionRenderer";
 
@@ -16,7 +17,7 @@ const AboutMe = async () => {
   const { summaries, timelines } = response.data!;
 
   return (
-    <SectionRenderer id="about" name="About Me">
+    <SectionRenderer id={NAV_REFERENCE_IDS.ABOUT} name="About Me">
       <motion.div
         initial="offscreen"
         whileInView="onscreen"

@@ -3,6 +3,7 @@ import * as motion from "motion/react-client";
 
 import api from "@/utils/api";
 import ANIMATION from "@/constants/animation";
+import { NAV_REFERENCE_IDS } from "@/constants/navLinks";
 
 import SectionRenderer from "./SectionRenderer";
 import ProjectCard from "./cards/ProjectCard";
@@ -15,7 +16,11 @@ const Projects = async () => {
   const { projects } = response.data!;
 
   return (
-    <SectionRenderer id="projects" name="Featured Projects" caption="Check out some of my recent projects">
+    <SectionRenderer
+      id={NAV_REFERENCE_IDS.PROJECTS}
+      name="Featured Projects"
+      caption="Check out some of my recent projects"
+    >
       <motion.div
         variants={ANIMATION.group}
         initial="offscreen"

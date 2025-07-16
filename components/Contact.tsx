@@ -5,6 +5,7 @@ import { IoTimeOutline } from "react-icons/io5";
 import * as motion from "motion/react-client";
 
 import ANIMATION from "@/constants/animation";
+import { NAV_REFERENCE_IDS } from "@/constants/navLinks";
 
 import SocialLinks from "./SocialLinks";
 
@@ -22,7 +23,7 @@ const INFORMATION: { id: string; label: string; value: string; type?: "email"; i
 const Contact = () => {
   return (
     <motion.section
-      id="contact"
+      id={NAV_REFERENCE_IDS.CONTACT}
       className="container mx-auto"
       variants={ANIMATION.group}
       initial="offscreen"

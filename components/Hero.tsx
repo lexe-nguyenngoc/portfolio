@@ -15,7 +15,7 @@ const Hero = async () => {
 
   return (
     <motion.section
-      className="h-[calc(100vh-64px)] md:h-[800px] relative"
+      className="h-[calc(100vh-64px)] md:h-[900px] relative"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ amount: "some", once: true }}

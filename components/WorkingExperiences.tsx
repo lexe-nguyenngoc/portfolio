@@ -3,6 +3,7 @@ import * as motion from "motion/react-client";
 
 import api from "@/utils/api";
 import ANIMATION from "@/constants/animation";
+import { NAV_REFERENCE_IDS } from "@/constants/navLinks";
 
 import SectionRenderer from "./SectionRenderer";
 import WorkingExperienceCard from "./cards/WorkingExperienceCard";
@@ -15,7 +16,7 @@ const WorkingExperiences = async () => {
   const { data } = response.data!;
 
   return (
-    <SectionRenderer id="experiences" name="My Experiences" caption="Where I've Been Employed">
+    <SectionRenderer id={NAV_REFERENCE_IDS.EXPERIENCES} name="My Experiences" caption="Where I've Been Employed">
       <motion.div
         variants={ANIMATION.group}
         initial="offscreen"

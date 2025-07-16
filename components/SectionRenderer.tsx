@@ -13,7 +13,7 @@ interface SectionRenderer {
 
 const SectionRenderer = ({ id, name, caption, className, children }: SectionRenderer) => {
   return (
-    <section id={id} className={cn("py-8 md:py-12", className)}>
+    <section id={id} className={cn("py-8 md:py-12 scroll-mt-4", className)}>
       <div className="mb-4 md:mb-14">
         <motion.h3
           variants={ANIMATION.slideUp}

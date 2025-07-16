@@ -6,6 +6,7 @@ import { getDeviconClassName } from "@/utils/devicon";
 import api from "@/utils/api";
 import ANIMATION from "@/constants/animation";
 
+import { NAV_REFERENCE_IDS } from "@/constants/navLinks";
 import SectionRenderer from "./SectionRenderer";
 
 const TechStack = async () => {
@@ -16,7 +17,7 @@ const TechStack = async () => {
 
   return (
     <SectionRenderer
-      id="skills"
+      id={NAV_REFERENCE_IDS.SKILLS}
       name="Tech Stack"
       caption="The technologies I use to bring ideas to life"
       className="bg-background-2nd"

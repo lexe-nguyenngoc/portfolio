@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto, JetBrains_Mono as JetBrainsMono } from "next/font/google";
+
+import { DOMAIN_NAME } from "@/constants/configs";
+
 import "./globals.css";
 
 const roboto = Roboto({
@@ -25,21 +28,21 @@ export const metadata: Metadata = {
     address: false,
     telephone: false
   },
-  metadataBase: new URL("https://your-portfolio-domain.com"),
+  metadataBase: new URL(DOMAIN_NAME),
   alternates: {
     canonical: "/"
   },
   openGraph: {
-    title: "Nguyễn Văn A - Frontend Developer Portfolio",
-    description: "Portfolio của Frontend Developer chuyên về React, Next.js, TypeScript và UI/UX",
-    url: "https://your-portfolio-domain.com",
-    siteName: "Nguyễn Văn A Portfolio",
+    title: "Nguyen Ngoc Le - Frontend Engineer Portfolio",
+    description: "Frontend Engineer Portfolio — React, Next.js, TypeScript & UI/UX Specialist",
+    url: DOMAIN_NAME,
+    siteName: "Nguyen Ngoc Le Portfolio",
     images: [
       {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Nguyễn Văn A - Frontend Developer Portfolio"
+        alt: "Nguyen Ngoc Le - Frontend Engineer Portfolio"
       }
     ],
     locale: "vi_VN",
@@ -47,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nguyễn Văn A - Frontend Developer Portfolio",
-    description: "Portfolio của Frontend Developer chuyên về React, Next.js, TypeScript và UI/UX",
+    title: "Nguyen Ngoc Le - Frontend Engineer Portfolio",
+    description: "Frontend Engineer Portfolio — React, Next.js, TypeScript & UI/UX Specialist",
     images: ["/twitter-image.png"]
   },
   robots: {

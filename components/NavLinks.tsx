@@ -45,7 +45,7 @@ const NavLinks = ({ className, onNavClick }: NavLinksProps) => {
       {NAV_LINKS.map((item) => (
         <motion.li key={item.href} variants={itemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
           <Link
-            href={item.href}
+            href={`#${item.href}`}
             onClick={onNavClick}
             className="text-md uppercase hover:text-accent transition-all ease-in-out duration-300"
           >
