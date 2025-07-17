@@ -1,7 +1,6 @@
-import { DOMAIN_NAME } from "@/constants/configs";
 import fetchHandler from "./fetch";
 
-const BASE_URL = `${DOMAIN_NAME}/data`;
+const BASE_URL = `/public/data/`;
 
 const api = {
   getHero: () => fetchHandler<HeroData>(`${BASE_URL}/hero.json`),

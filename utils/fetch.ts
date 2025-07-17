@@ -1,11 +1,12 @@
-const fetchHandler = async <T>(url: string): Promise<ActionResponse<T>> => {
-  const response = await fetch(url);
+import path from "path";
+import fs from "fs";
 
-  if (!response.ok) return { success: false };
+const fetchHandler = async <T>(url: string): Promise<ActionResponse<T>> => {
+  const fileContents = fs.readFileSync(path.join(process.cwd(), url), "utf8");
 
   return {
     success: true,
-    data: await response.json()
+    data: JSON.parse(fileContents)
   };
 };
 

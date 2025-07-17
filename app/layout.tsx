@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     type: "website"
   },
   twitter: {
-    card: "/social.jpeg",
+    card: "summary_large_image",
     title: "Nguyen Ngoc Le - Frontend Engineer Portfolio",
     description: "Frontend Engineer Portfolio — React, Next.js, TypeScript & UI/UX Specialist",
     images: ["/social.jpeg"]
