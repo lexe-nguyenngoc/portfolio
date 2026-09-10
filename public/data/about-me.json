@@ -4,10 +4,16 @@
     "Proficient in source code management, CI/CD, and application deployment across various environments, including production with Azure DevOps. I focus on performance optimization, user experience, and stable deployment workflows.With a strong foundation in Scrum, I thrive in dynamic teams, continuously learning and contributing to innovative solutions."
   ],
   "timelines": [
+     {
+      "role": "Frontend Engineer",
+      "startAt": "Jan 2026",
+      "finishAt": null,
+      "company": "ACB-Asia Commercial Bank"
+     },
     {
       "role": "Frontend Engineer",
       "startAt": "May 2021",
-      "finishAt": null,
+      "finishAt": "Jan 2026",
       "company": "FPT Software Ho Chi Minh"
     }
   ]
