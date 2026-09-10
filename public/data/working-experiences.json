@@ -1,10 +1,20 @@
 {
   "data": [
     {
+      "id": "4",
+      "role": "FrontEnd Engineer",
+      "projectName": "New Workflow",
+      "startAt": "1/20/2026",
+      "company": "ACB",
+      "description": "Engineered and continuously enhanced a mission-critical international payment platform for the banking sector, where reliability, security, and scalability are paramount. Focused on building high-quality, maintainable solutions while safeguarding sensitive financial operations and ensuring seamless transaction processing. The platform plays a critical role in supporting the company’s core business and high-value financial services, delivering significant operational and commercial impact.",
+      "techStacks": ["React", "Styled Component", "JavaScript", "Sentry", "Gitlab"]
+    },
+    {
       "id": "1",
       "role": "FrontEnd Engineer",
       "projectName": "Project Control Tower",
       "startAt": "1/1/2024",
+      "finishAt": "1/15/2026",
       "company": "FPT Software Ho Chi Minh, Vietnam",
       "description": "This project aims to build a cloud-based platform for real-time data visualization, seamlessly integrating IoT devices and connecting various project management systems across the enterprise. The goal is to provide stakeholders with a comprehensive view of project progress, risks, and performance, enabling faster and more informed decision-making. The platform also fosters cross-departmental collaboration by creating a centralized space for information sharing and communication.",
       "techStacks": ["Next.js", "React", "TypeScript", "TailwindCSS", "Prisma", "HTML", "Azure Devops"]
