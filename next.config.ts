@@ -5,8 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [new URL("https://storage.googleapis.com/**")]
   },
-  output: "export",
-  basePath: "/portfolio"
+  output: "export"
 };
 
 export default nextConfig;

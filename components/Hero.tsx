@@ -5,6 +5,7 @@ import * as motion from "motion/react-client";
 
 import api from "@/utils/api";
 import ANIMATION from "@/constants/animation";
+import { publicPath } from "@/utils/paths";
 
 const Hero = async () => {
   const response = await api.getHero();
@@ -22,7 +23,7 @@ const Hero = async () => {
     >
       <div className="absolute inset-0 -z-1">
         <motion.div variants={ANIMATION.fade}>
-          <Image className="object-cover" src="/hero.png" fill alt="Hero image" />
+          <Image className="object-cover" src={publicPath("/hero.png")} fill alt="Hero image" />
         </motion.div>
         <div className="absolute inset-0 bg-background/60"></div>
       </div>
@@ -66,7 +67,7 @@ const Hero = async () => {
             className="animate-bounce"
             width={320}
             height={320}
-            src="/hero-2.png"
+            src={publicPath("/hero-2.png")}
             alt="minimalist abstract 3D illustration of code symbols and developer elements floating in space, geometric shapes, purple and teal color scheme"
           />
         </div>

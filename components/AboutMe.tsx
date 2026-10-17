@@ -6,6 +6,7 @@ import { formatDate } from "@/utils/format";
 import api from "@/utils/api";
 import ANIMATION from "@/constants/animation";
 import { NAV_REFERENCE_IDS } from "@/constants/navLinks";
+import { publicPath } from "@/utils/paths";
 
 import SectionRenderer from "./SectionRenderer";
 
@@ -29,7 +30,7 @@ const AboutMe = async () => {
           className="w-full md:min-w-[300px] lg:min-w-[400px] min-h-[400px] relative border-primary/30 border rounded"
           variants={ANIMATION.slideUp}
         >
-          <Image src="/avatar.jpg" fill alt="avatar" className="object-cover object-center" />
+          <Image src={publicPath("/avatar.jpg")} fill alt="avatar" className="object-cover object-center" />
         </motion.div>
         <div className="mt-4 md:mt-0">
           <div>
