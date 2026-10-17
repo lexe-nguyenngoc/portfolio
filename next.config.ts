@@ -4,7 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     remotePatterns: [new URL("https://storage.googleapis.com/**")]
-  }
+  },
+  output: "export"
 };
 
 export default nextConfig;
